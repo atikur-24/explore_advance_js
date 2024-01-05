@@ -16,9 +16,9 @@ const hello = () => ({
 });
 // console.log(hello());
 
-// function hello2() {
-//   return () => {
-//     console.log("hello2 world");
-//   };
-// }
+function hello2() {
+  return () => {
+    console.log("hello2 world");
+  };
+}
 // hello2();

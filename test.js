@@ -10,9 +10,15 @@ function learn(topic) {
 // console.log(`I know ${lang}`);
 
 // function
-
 const hello = () => ({
   a: 5,
   b: 6,
 });
-console.log(hello());
+// console.log(hello());
+
+// function hello2() {
+//   return () => {
+//     console.log("hello2 world");
+//   };
+// }
+// hello2();

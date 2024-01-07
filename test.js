@@ -10,11 +10,11 @@ function learn(topic) {
 // console.log(`I know ${lang}`);
 
 // function
-const hello = () => ({
+const fHello = () => ({
   a: 5,
   b: 6,
 });
-// console.log(hello());
+// console.log(fHello());
 
 function hello2() {
   return () => {
@@ -22,3 +22,43 @@ function hello2() {
   };
 }
 // hello2();
+
+/* array methods */
+
+const fruits = ["Mango", "Apple", "Banana", "Orange", "Apple"];
+
+const result = fruits.map((f) => {
+  if (f === "Apple") {
+    return "Apple";
+  } else {
+    return "N/A";
+  }
+});
+
+// console.log(result);
+// console.log(fruits);
+
+const numbers = [1, 2, 3, 4, 5];
+
+const res = numbers.reduce((total, currentValue) => {
+  return total + currentValue;
+}, 0);
+
+// console.log(res);
+
+/* object */
+
+const instructor = {
+  name: "Atikur",
+  class: "JavaScript",
+  ID: 23,
+};
+
+// console.log({ ...instructor });
+
+function sum(text, ...rest) {
+  const result = rest.reduce((sum, cur) => sum + cur, 0);
+  // console.log(`${text} ${result}`);
+}
+
+sum("This is output: ", 5, 6, 7, 8, 9);

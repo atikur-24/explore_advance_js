@@ -71,3 +71,11 @@ function sum(text, ...rest) {
 }
 
 sum("This is output: ", 5, 6, 7, 8, 9);
+
+/* nullish = null / undefined */
+
+const language = null;
+
+console.log(language ?? "JavaScript");
+console.log(language || "JavaScript");
+console.log(language && "JavaScript");

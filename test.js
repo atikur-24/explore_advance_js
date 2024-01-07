@@ -51,10 +51,16 @@ const res = numbers.reduce((total, currentValue) => {
 const instructor = {
   name: "Atikur",
   class: "JavaScript",
-  ID: 23,
+  id: 23,
+  education: {
+    degree: "BBA",
+  },
 };
-
 // console.log({ ...instructor });
+
+const { education: { degree } = {} } = instructor;
+
+console.log(degree);
 
 function sum(text, ...rest) {
   const result = rest.reduce((sum, cur) => sum + cur, 0);

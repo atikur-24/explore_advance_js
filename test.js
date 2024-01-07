@@ -54,13 +54,16 @@ const instructor = {
   id: 23,
   education: {
     degree: "BBA",
+    // subjects: {
+    //   firstYear: "Accounting",
+    // },
   },
 };
 // console.log({ ...instructor });
 
 const { education: { degree } = {} } = instructor;
 
-console.log(degree);
+console.log(instructor?.education?.subjects?.firstYear);
 
 function sum(text, ...rest) {
   const result = rest.reduce((sum, cur) => sum + cur, 0);

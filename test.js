@@ -76,6 +76,6 @@ sum("This is output: ", 5, 6, 7, 8, 9);
 
 const language = null;
 
-console.log(language ?? "JavaScript");
-console.log(language || "JavaScript");
-console.log(language && "JavaScript");
+// console.log(language ?? "JavaScript");
+// console.log(language || "JavaScript");
+// console.log(language && "JavaScript");

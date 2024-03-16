@@ -2,7 +2,7 @@ function helloThis() {
     // "use strict";
     // console.log(this);
 }
-helloThis();
+// helloThis();
 
 function unNamed() {
     this.name = "Atikur Rahman";
@@ -45,3 +45,19 @@ const myCustomObj3 = {
     },
 };
 // myCustomObj3.anotherObj.value()
+
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    },
+};
+
+const person2 = {
+    firstName: "Stive",
+    lastName: "Smith",
+};
+
+// console.log(person.fullName.call(person2));

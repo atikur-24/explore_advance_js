@@ -1,14 +1,8 @@
 function helloThis() {
-    // "use strict";
-    // console.log(this);
+    "use strict";
+    console.log(this);
 }
 // helloThis();
-
-function unNamed() {
-    this.name = "Atikur Rahman";
-}
-unNamed();
-// console.log(name);
 
 const myCustomObj = {
     name: "Atikur Rahman",
@@ -18,7 +12,7 @@ const myCustomObj = {
         console.log(this);
     },
 };
-// myCustomObj.msg()
+// myCustomObj.msg();
 
 const myCustomObj2 = {
     name: "Atikur Rahman",
@@ -31,7 +25,7 @@ const myCustomObj2 = {
         },
     },
 };
-// myCustomObj2.anotherObj.msg()
+// myCustomObj2.anotherObj.msg();
 
 const myCustomObj3 = {
     name: "Atikur Rahman",
@@ -44,7 +38,7 @@ const myCustomObj3 = {
         },
     },
 };
-// myCustomObj3.anotherObj.value()
+// myCustomObj3.anotherObj.value();
 
 const person = {
     firstName: "John",
@@ -60,4 +54,5 @@ const person2 = {
     lastName: "Smith",
 };
 
+// console.log(person.fullName());
 // console.log(person.fullName.call(person2));

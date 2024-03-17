@@ -69,3 +69,52 @@ const jack = {
     dob: 1986,
 };
 // console.log(martinez.age.apply(jack, [2018, "This is"]));
+
+/* --------- Bind Method ---------- */
+const myCustomObj4 = {
+    name: "Atikur Rahman",
+    age: 23,
+    job: "Web Developer",
+    anotherObj: {
+        name: "Saad",
+        value: function () {
+            console.log("My name is " + this.name);
+        },
+    },
+};
+
+const storeFunc = myCustomObj4.anotherObj.value.bind(myCustomObj4);
+// storeFunc();
+
+const watson = {
+    name: "Watson Shane",
+    dob: 1996,
+    age: function (currentYear, msg) {
+        console.log(msg + " " + this.name + " " + (currentYear - this.dob) + " year old");
+    },
+};
+
+const smith = {
+    name: "Smith Stine",
+    dob: 1986,
+};
+
+const smithAge = watson.age.bind(smith, 2018);
+// smithAge("This is");
+
+const personBind = {
+    firstName: "John",
+    lastName: "Doe",
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    },
+};
+
+const member = {
+    firstName: "Hege",
+    lastName: "Nilsen",
+};
+
+let fullName = personBind.fullName.bind(member);
+
+// console.log(fullName());
